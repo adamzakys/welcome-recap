@@ -3,7 +3,7 @@
 Skrip terminal sederhana yang menampilkan **rekap aktivitas desktop** setiap kali kamu membuka terminal (zsh/bash), termasuk:
 
 - Nama aplikasi yang sedang terbuka
-- Screenshot terbaru dari desktop kamu
+- Screenshot terbaru dari desktop angda
 - Perintah terakhir di terminal
 - Dukungan tampilan gambar langsung dalam terminal seperti `kitty` atau `wezterm`
 
@@ -12,9 +12,9 @@ Skrip terminal sederhana yang menampilkan **rekap aktivitas desktop** setiap kal
 ## ✨ Fitur
 
 - ⏱️ Logger aplikasi aktif tiap 10 menit (`app_logger.sh`)
-- 📸 Screenshot otomatis desktop tiap 10 menit (`auto_screenshot.sh`)
+- 📸 Screenshot otomatis desktop tiap 30 menit(trigger waktunya edit aja bjir diline terakhir, tinggal ganti angka) (`auto_screenshot.sh`)
 - 📋 Rekap langsung muncul saat buka terminal (`recap.sh`)
-- 🖼️ Mendukung terminal `kitty`/`wezterm` untuk preview gambar
+- 🖼️ Mendukung terminal `kitty`/`wezterm` (untuk saat ini req ae) untuk preview gambar
 - 📄 Cronjob otomatis saat instalasi
 
 ---
@@ -82,7 +82,7 @@ Yang bakal dihapus:
 
 ## ⚙️ Catatan Tambahan
 
-- Gambar cuma tampil kalau terminal kamu support (`kitty`, `wezterm`)
+- Gambar cuma tampil kalau terminal kamu support (`kitty`, `wezterm`) (sementara)
 - Screenshot bakal disimpan di:
 
   ```
