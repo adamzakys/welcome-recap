@@ -51,12 +51,6 @@ sudo apt update
 sudo apt install xdotool gnome-screenshot
 ```
 
-#### Kalau kamu pakai Arch/Manjaro:
-
-```bash
-sudo pacman -S xdotool gnome-screenshot
-```
-
 ### 3. Langsung instal skripnya
 
 ```bash
