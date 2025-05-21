@@ -107,4 +107,4 @@ Boleh juga fork dan modif suka-suka.
 ## 📜 Lisensi
 
 MIT License — bebas dipakai, dimodif, dan dibagiin.  
-Kalau bisa sih tetap kasih kredit, biar sama-sama cuan 😎
+Kalau bisa sih tetap kasih kredit, biar sama-sama terkinil awkwwk
