@@ -1,4 +1,4 @@
-# 🖥️ Welcome Recap — Terminal Login Recap Screenshot
+# 🖥️ Welcome Recap — Terminal Login Recap Screenshot [beta, starin ae biar gwejh lanjut]
 
 Skrip terminal sederhana yang menampilkan **rekap aktivitas desktop** setiap kali kamu membuka terminal (zsh/bash), termasuk:
 
@@ -23,7 +23,7 @@ Skrip terminal sederhana yang menampilkan **rekap aktivitas desktop** setiap kal
 
 Kalau kamu pakai terminal `kitty`, nanti tampilannya bakal kayak gini:
 
-![Preview Welcome Recap di Kitty Terminal](screenshots/screenshot_2025-05-21_18-17-38.png)
+![Preview Welcome Recap di Kitty Terminal](screenshots/screenshot_2025-05-21_18-17-38.png).
 
 ---
 
