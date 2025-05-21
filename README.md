@@ -1,80 +1,116 @@
-🖥️ Welcome Recap — Terminal Login Recap Screenshot
-Skrip terminal sederhana yang menampilkan rekap aktivitas desktop setiap kali kamu membuka terminal (zsh/bash), termasuk:
+# 🖥️ Welcome Recap — Terminal Login Recap Screenshot
 
-Nama aplikasi yang sedang terbuka
+Skrip terminal sederhana yang menampilkan **rekap aktivitas desktop** setiap kali kamu membuka terminal (zsh/bash), termasuk:
 
-Screenshot terbaru dari desktop kamu
+- Nama aplikasi yang sedang terbuka
+- Screenshot terbaru dari desktop kamu
+- Perintah terakhir di terminal
+- Dukungan tampilan gambar langsung dalam terminal seperti `kitty` atau `wezterm`
 
-Perintah terakhir di terminal
+---
 
-Dukungan tampilan gambar langsung dalam terminal seperti kitty atau wezterm
+## ✨ Fitur
 
-✨ Fitur
-⏱️ Logger aplikasi aktif tiap 10 menit (app_logger.sh)
+- ⏱️ Logger aplikasi aktif tiap 10 menit (`app_logger.sh`)
+- 📸 Screenshot otomatis desktop tiap 10 menit (`auto_screenshot.sh`)
+- 📋 Rekap langsung muncul saat buka terminal (`recap.sh`)
+- 🖼️ Mendukung terminal `kitty`/`wezterm` untuk preview gambar
+- 📄 Cronjob otomatis saat instalasi
 
-📸 Screenshot otomatis desktop tiap 10 menit (auto_screenshot.sh)
+---
 
-📋 Rekap langsung muncul saat buka terminal (recap.sh)
+## 🖼️ Preview
 
-🖼️ Mendukung terminal kitty/wezterm untuk preview gambar
+Kalau kamu pakai terminal `kitty`, nanti tampilannya bakal kayak gini:
 
-📄 Cronjob otomatis saat instalasi
+![Preview Welcome Recap di Kitty Terminal](screenshots/screenshot_2025-05-21_18-17-38.png)
 
-🖼️ Preview
-Kalau kamu pakai terminal kitty, nanti tampilannya bakal kayak gini:
+---
 
-📦 Instalasi
-1. Clone repository-nya
+## 📦 Instalasi
+
+### 1. Clone repository-nya
+
+```bash
 git clone https://github.com/adamzakys/welcome-recap.git ~/.welcome_recap
 cd ~/.welcome_recap
+```
 
-2. Instal aplikasi yang dibutuhkan
+### 2. Instal aplikasi yang dibutuhkan
+
 Minimal kamu butuh:
 
-xdotool → buat deteksi aplikasi yang aktif
+- `xdotool` → buat deteksi aplikasi yang aktif  
+- `gnome-screenshot` → buat ambil screenshot (kalau kamu pakai Wayland, bisa pakai `grim`)  
+- Terminal yang support gambar kayak `kitty` atau `wezterm`
 
-gnome-screenshot → buat ambil screenshot (kalau kamu pakai Wayland, bisa pakai grim)
+#### Kalau kamu pakai Ubuntu/Debian:
 
-Terminal yang support gambar kayak kitty atau wezterm
-
-Kalau kamu pakai Ubuntu/Debian:
-
+```bash
 sudo apt update
 sudo apt install xdotool gnome-screenshot
+```
 
-Kalau kamu pakai Arch/Manjaro:
+#### Kalau kamu pakai Arch/Manjaro:
 
+```bash
 sudo pacman -S xdotool gnome-screenshot
+```
 
-3. Langsung instal skripnya
+### 3. Langsung instal skripnya
+
+```bash
 bash install.sh
+```
 
 Yang bakal dilakukan:
 
-Nambah cronjob biar auto_screenshot.sh & app_logger.sh jalan otomatis tiap 10 menit
+- Nambah cronjob biar `auto_screenshot.sh` & `app_logger.sh` jalan otomatis tiap 10 menit
+- Masukin pemanggilan `recap.sh` ke `.zshrc` atau `.bashrc`, jadi tiap buka terminal langsung tampil
 
-Masukin pemanggilan recap.sh ke .zshrc atau .bashrc, jadi tiap buka terminal langsung tampil
+---
 
-❌ Uninstall
+## ❌ Uninstall
+
 Gampang banget bro:
 
+```bash
 bash uninstall.sh
+```
 
 Yang bakal dihapus:
 
-Cronjob otomatis
+- Cronjob otomatis
+- Folder `~/.welcome_recap` beserta isinya
+- Baris script `recap.sh` dari `.zshrc` atau `.bashrc`
 
-Folder ~/.welcome_recap beserta isinya
+---
 
-Baris script recap.sh dari .zshrc atau .bashrc
+## ⚙️ Catatan Tambahan
 
-⚙️ Catatan Tambahan
-Gambar cuma tampil kalau terminal kamu support (kitty, wezterm)
+- Gambar cuma tampil kalau terminal kamu support (`kitty`, `wezterm`)
+- Screenshot bakal disimpan di:
 
-Screenshot bakal disimpan di:
+  ```
+  ~/.welcome_recap/screenshots/
+  ```
 
-~/.welcome_recap/screenshots/
+- Log aplikasi disimpan di:
 
-Log aplikasi disimpan di:
+  ```
+  ~/.welcome_recap/log_apps.txt
+  ```
 
-~/.welcome_recap/log_apps.txt
+---
+
+## ☕ Kontribusi
+
+Punya ide fitur keren atau nemu bug? Langsung bikin PR atau issue aja ya cuy!  
+Boleh juga fork dan modif suka-suka.
+
+---
+
+## 📜 Lisensi
+
+MIT License — bebas dipakai, dimodif, dan dibagiin.  
+Kalau bisa sih tetap kasih kredit, biar sama-sama cuan 😎
